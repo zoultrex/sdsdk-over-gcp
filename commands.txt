@@ -1,0 +1,5 @@
+gcloud functions deploy sd-inference-func --memory=20gb --timeout=8m --region=us-east4 --allow-unauthenticated --trigger-http --runtime=python38 --gen2 --entry-point=inference --project cryptic-now-370823
+gcloud functions deploy check-nvidia-func --memory=1gb --region=us-east4 --allow-unauthenticated --trigger-http --runtime=python38 --gen2 --entry-point=check_gpu --project cryptic-now-370823
+gcloud functions describe sd-inference-func --region=us-east4 --gen2 --project=cryptic-now-370823
+
+gcloud functions logs read sd-inference-func --gen2 --project=cryptic-now-370823 --region=us-east4

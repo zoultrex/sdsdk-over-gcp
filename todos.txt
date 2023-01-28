@@ -1,0 +1,5 @@
+todo
+zip file locally
+upload zip
+download and extract zip
+run inference
